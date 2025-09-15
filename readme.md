@@ -39,7 +39,7 @@ int main() {
         - [getInfo](#getinfo)
 
 
-### Функции
+## Функции
 ## Работа с текстом
 # showText
 ```void showText()```
