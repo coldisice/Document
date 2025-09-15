@@ -1,7 +1,7 @@
 # Documents
 Данная библиотека предоставляет класс Document, который предназначен для работы с текстом в файлах с расширением .txt. 
 
-## Использование
+# Использование
 
 Для работы вам потребуются `include/document.h` и `src/document.cpp`.
 После чего достаточно подключить заголовочный файл `#include "../../document.h"` в исходный код и объявить объект класса Document:
@@ -20,7 +20,7 @@ int main() {
 }
 ```
 
-## Содержание
+# Содержание
 - [Функции](#функции)
     - [Работа с текстом](#работа-с-текстом)
         - [showText](#showtext)
@@ -39,34 +39,34 @@ int main() {
         - [getInfo](#getinfo)
 
 
-## Функции
+# Функции
 ## Работа с текстом
-# showText
+### showText
 ```void showText()```
 
 Выводит текст в консоль, который до этого был получен при помощи функций: [getTextFromFile()](#gettextfromfile) или [getText()](#gettext).
 
-# insertText
+### insertText
 ```void insertText(int offset, const std::string* yourText)```
 
 Вставляет текст по указанному смещению.
 
-# deleteTextInRange
+### deleteTextInRange
 ```void deleteTextInRange(int index, int count)```
 
 Удаляет `count` символов в тексте начиная от `left`. Фактически дублирует `std::string::erase`. 
 
-# deleteTextAt
+### deleteTextAt
 ```void deleteTextAt(int index)```
 
 Удаляет символ в тексте по указанному индексу.
 
-# clearText
+### clearText
 ```void clearText()```
 
 Очищает текст, хранящийся в объекте класса Document.
 
-# getText
+### getText
 ```void getText(const std::string* yourText)```
 ```void getText(const char* yourText)```
 
@@ -74,29 +74,29 @@ int main() {
 
 ## Работа с файлами
 
-# clearTextAtFile
+### clearTextAtFile
 ```void clearTextAtFile(const std::string *fileName)```
 
 Сохраняет/перезаписывает пустой файл .txt с имененем `fileName` в ту же директорию, из которой запущена программа.
 
-# getTextFromFile
+### getTextFromFile
 ```void getTextFromFile(const std::string *fileName)```
 
 Подготавливает текст, хранящийся в файле, к работе.
 
-# textToFile
+### textToFile
 ```void textToFile(const std::string* fileName)```
 
 Сохраняет текст, хранящийся в объекте класса Document в файл с именем `fileName` в ту же директорию, из которой запущена программа.
 
 ## Вспомогательные функции
 
-# findElementRow
+### findElementRow
 ```int findElementRow(int id)```
 
 Возвращает номер строки, на которой находится нужная буква текста.
 
-# getInfo
+### getInfo
 ```int getInfo(bool ignorecount=0)```
 
 Используется библиотекой для обновления информации о массиве (количество строк, длина каждой строки и индексы символа перехода строки/нуль символа). Если вы хотите получить количество строк, хранимое в данный момент объектом Document, используйте `int getInfo(1)`.
