@@ -1,9 +1,13 @@
 #include "document.h"
-#include <iostream>
 
 int main() {
-	Document test;
-	test.textToFile("Hello_test.txt");
-	
+	Document text;
+    const std::string yourText = "Hello world!";
+    text.getText(&yourText); // or
+	text.getText("Bye world!");
+	text.showText();
+	// will print
+	// [SHOW TEXT]
+	// Hello world!Bye world!
 	return 0;
 }
